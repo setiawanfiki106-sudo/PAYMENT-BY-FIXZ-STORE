@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pilih Metode Pembayaran</h1>
+        <p>Silakan pilih salah satu metode di bawah ini untuk melanjutkan pembayaran.</p>
+        <div class="payment-options">
+            <div class="payment-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Dana_logo_vector.png/1200px-Dana_logo_vector.png" alt="Logo DANA">
+                <h2>DANA</h2>
+                <p>Nomor: 083850320391</p>
+                <button onclick="copyToClipboard('083850320391')">Salin Nomor</button>
+            </div>
+            <div class="payment-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Gopay_logo_vector.svg/1200px-Gopay_logo_vector.svg.png" alt="Logo GoPay">
+                <h2>GoPay</h2>
+                <p>Nomor: 083850320391</p>
+                <button onclick="copyToClipboard('083850320391')">Salin Nomor</button>
+            </div>
+            <div class="payment-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_vector.svg/1200px-Logo_ovo_vector.svg.png" alt="Logo OVO">
+                <h2>OVO</h2>
+                <p>Nomor: 083850320391</p>
+                <button onclick="copyToClipboard('083850320391')">Salin Nomor</button>
+            </div>
+            <div class="payment-card qris">
+                <img src="https://files.catbox.moe/1p526x.jpg" alt="QRIS Code">
+                <h2>QRIS</h2>
+                <p>Pindai kode QRIS di atas untuk melakukan pembayaran.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Nomor berhasil disalin!');
+            }, function(err) {
+                alert('Gagal menyalin nomor.');
+            });
+        }
+    </script>
+</body>
+</html>
